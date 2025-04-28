@@ -1,43 +1,61 @@
+
 import { Card, CardContent } from "./ui/card";
 
 const HistorySection = () => {
-  const historyMilestones = [
-    {
-      year: "1893",
-      title: "Основание города",
-      description: "Основан как поселение строителей железнодорожного моста через реку Обь. Первоначально назывался Новониколаевск.",
-    },
-    {
-      year: "1925",
-      title: "Переименование",
-      description: "Город переименован в Новосибирск. Стал административным центром Сибирского края.",
-    },
-    {
-      year: "1930-е",
-      title: "Индустриализация",
-      description: "Период быстрого роста и индустриализации. Новосибирск становится важным промышленным центром Сибири.",
-    },
-  ];
-
   return (
-    <section id="history" className="py-16 bg-muted/50">
-      <div className="container">
-        <h2 className="text-3xl font-bold mb-8 text-center">История города</h2>
+    <section id="history" className="py-16 bg-slate-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-12 relative">
+          История города
+          <span className="block w-20 h-1 bg-primary mx-auto mt-4"></span>
+        </h2>
+        
         <div className="grid md:grid-cols-3 gap-6">
-          {historyMilestones.map((milestone, index) => (
-            <Card key={index} className="hover:shadow-md transition-shadow">
-              <CardContent className="pt-6">
-                <div className="mb-4 text-primary font-bold text-xl">{milestone.year}</div>
-                <h3 className="text-xl font-semibold mb-2">{milestone.title}</h3>
-                <p className="text-muted-foreground">{milestone.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <p className="text-lg">
-            За свою более чем 125-летнюю историю Новосибирск превратился из небольшого поселения в один из крупнейших городов России, став настоящей столицей Сибири.
-          </p>
+          <Card className="shadow-md hover-scale">
+            <CardContent className="p-6 space-y-3">
+              <div className="text-primary text-2xl font-bold">1893</div>
+              <h3 className="text-xl font-semibold">Основание</h3>
+              <p>
+                Город был основан как поселение строителей железнодорожного моста через реку Обь. 
+                Первоначально назывался Новониколаевск в честь императора Николая II.
+              </p>
+            </CardContent>
+          </Card>
+          
+          <Card className="shadow-md hover-scale">
+            <CardContent className="p-6 space-y-3">
+              <div className="text-primary text-2xl font-bold">1925</div>
+              <h3 className="text-xl font-semibold">Переименование</h3>
+              <p>
+                Город был переименован в Новосибирск. В годы индустриализации он стремительно
+                развивался как промышленный центр, получив статус столицы Сибирского края.
+              </p>
+            </CardContent>
+          </Card>
+          
+          <Card className="shadow-md hover-scale">
+            <CardContent className="p-6 space-y-3">
+              <div className="text-primary text-2xl font-bold">1941-1945</div>
+              <h3 className="text-xl font-semibold">Военное время</h3>
+              <p>
+                Во время Великой Отечественной войны в Новосибирск были эвакуированы
+                десятки предприятий из западных регионов страны, что дало мощный толчок
+                промышленному развитию города.
+              </p>
+            </CardContent>
+          </Card>
+          
+          <Card className="shadow-md hover-scale md:col-span-3">
+            <CardContent className="p-6 space-y-3">
+              <div className="text-primary text-2xl font-bold">1957 - наши дни</div>
+              <h3 className="text-xl font-semibold">Научный центр</h3>
+              <p>
+                В 1957 году началось строительство Академгородка — научного центра с десятками
+                исследовательских институтов. Сегодня Новосибирск — важнейший экономический, культурный,
+                транспортный, образовательный и научный центр Сибири и всей России.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

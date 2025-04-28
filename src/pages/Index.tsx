@@ -7,7 +7,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-gray-50">
       <header className="py-6 bg-white border-b">
         <div className="container mx-auto px-4">
           <h1 className="text-2xl font-bold text-center">Новосибирск</h1>
@@ -26,7 +26,7 @@ const Index = () => {
             берегах реки Обь и является важнейшим транспортным узлом Сибири.
           </p>
           <p>
-            Население — около 1,6 миллиона человек (2023), площадь города — 502,7 км².
+            Население — около 1,6 миллиона человек (2025), площадь города — 502,7 км².
           </p>
         </section>
         
@@ -70,7 +70,7 @@ const Index = () => {
       </main>
       
       <footer className="py-5 text-center text-sm text-gray-600 border-t">
-        <p>© 2025 Сайт создан Антоном Сыряминым</p>
+        <p>© 2025 Сайт создан Антоном С.</p>
       </footer>
     </div>
   );
